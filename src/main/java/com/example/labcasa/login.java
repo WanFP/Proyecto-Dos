@@ -26,7 +26,7 @@ public class login {
         GridPane.setConstraints(lB_welcomeMessage, 1,2);
         Label lB_loginInfo = new Label("Please enter your credentials to start playing");
         GridPane.setConstraints(lB_loginInfo, 1,3);
-        Label lB_loginInfo2 = new Label("If you don´t have an account please click on ´new user´");
+        Label lB_loginInfo2 = new Label("If you don´t have an account please click on 'new user'");
         GridPane.setConstraints(lB_loginInfo2, 1,4);
 
         Label lB_username = new Label("Username");
