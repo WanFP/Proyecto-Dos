@@ -1,8 +1,8 @@
 package com.example.labcasa;
 
-import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
@@ -36,10 +36,10 @@ public class login {
 
         Label lB_password = new Label("Password");
         GridPane.setConstraints(lB_password, 1,7);
-        TextField tF_passwordSpace = new TextField();
-        GridPane.setConstraints(tF_passwordSpace, 1,8);
+        PasswordField pF_passwordSpace = new PasswordField();
+        GridPane.setConstraints(pF_passwordSpace, 1,8);
 
-        Button bT_enter = new Button("Enter");
+        Button bT_enter = new Button("Validate password");
         GridPane.setConstraints(bT_enter, 1,9);
         bT_enter.setOnAction((event) -> {
             pane.getChildren().clear();
@@ -49,7 +49,7 @@ public class login {
         Button bT_newUser = new Button("New User");
         GridPane.setConstraints(bT_newUser, 1,10);
 
-        pane.getChildren().addAll(lB_tittleLogin, lB_welcomeMessage, lB_loginInfo,lB_loginInfo2,lB_username, tF_usernameSpace, lB_password, tF_passwordSpace, bT_enter, bT_newUser);
+        pane.getChildren().addAll(lB_tittleLogin, lB_welcomeMessage, lB_loginInfo,lB_loginInfo2,lB_username, tF_usernameSpace, lB_password, pF_passwordSpace, bT_enter, bT_newUser);
         return pane;
     }
 }

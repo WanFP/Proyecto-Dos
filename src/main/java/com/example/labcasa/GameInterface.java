@@ -5,17 +5,9 @@ import javafx.scene.control.Button;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
-
-
-import java.awt.*;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class GameInterface {
 
@@ -34,6 +26,8 @@ public class GameInterface {
     Button b21=new Button("");
     Button b22=new Button("");
 
+
+
     //Contador para determinar el empate
     int tieCount=1;
     public GridPane interfaceGame(String nameX, String nameO){
@@ -51,11 +45,20 @@ public class GameInterface {
 
         //Se define el botón reset
         Button reset =new Button("Reset");
-        GridPane.setConstraints(reset,2,0);
+        GridPane.setConstraints(reset,1,0);
         reset.setStyle("-fx-text-fill: white");
         reset.setStyle("-fx-background-color:#6673F4");
         reset.setFont(font2);
 
+        Button bT_out = new Button("Close");
+        GridPane.setConstraints(bT_out, 2, 0);
+        bT_out.setStyle("-fx-text-fill: white");
+        bT_out.setStyle("-fx-background-color:#6673F4");
+        bT_out.setFont(font2);
+
+        bT_out.setOnAction((actionEvent) -> {
+            gP_interface.setVisible(false);
+        });
 
         //Se define el tamaño de los botones y sus colores
         b00.setStyle("-fx-background-color:#FACF5C");
@@ -97,7 +100,7 @@ public class GameInterface {
         GridPane.setConstraints(b22, 2, 3);
 
 
-        pane.setPadding(new Insets(5,5,5,5));
+        pane.setPadding(new Insets(7,7,7,7));
 
         //Este label mostrará todos los mensajes en la escena del juego
         Label message = new Label("");
@@ -360,7 +363,7 @@ public class GameInterface {
         });
 
 
-        gP_interface.getChildren().addAll(message, reset, b00,b01,b02,b10,b11,b12,b20,b21,b22);
+        gP_interface.getChildren().addAll(message, reset, bT_out, b00,b01,b02,b10,b11,b12,b20,b21,b22);
         return gP_interface;
     }
     //setWinner establece cual jugador gana
