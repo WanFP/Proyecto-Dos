@@ -1,0 +1,3 @@
+Danny;Perdió;14/10/2022;2 min
+Katherin;Ganó;14/10/2022;2 horas
+Wanda;Ganó;14/10/2022;2 min
