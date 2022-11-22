@@ -45,23 +45,14 @@ public class start {
         GridPane.setConstraints(lB_gameTitle, 2,2);
         lB_gameTitle.setFont(font);
         lB_gameTitle.setStyle("-fx-text-fill: white");
-
-
-
-
         Label lB_welcome = new Label("   Welcome");
         GridPane.setConstraints(lB_welcome, 2, 5);
         lB_welcome.setFont(font);
         lB_welcome.setStyle("-fx-text-fill: white");
-
-
-
         Button bT_start = new Button("Start Game");
         GridPane.setConstraints(bT_start, 1, 8);
         bT_start.setFont(font2);
         bT_start.setPrefWidth(100);
-
-
         bT_start.setEffect(new DropShadow()); //start
 
         Label lB_name1 = new Label("Enter the name of player X");
